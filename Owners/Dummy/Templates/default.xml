@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- templateChunk model -->
+<template id="nested" number="" topic="" links="">
+
+    <!-- HEADER CONTENT -->
+    <header>
+
+        <assert>
+
+            <![CDATA[
+
+                :: HERE COMES SERVER/CLIENT SIDE SNIPPETS ::
+
+            ]]>
+
+        </assert>
+
+        <!--  -->
+        <content>
+
+                <style id=""/>
+
+                <style id="standard">
+
+                    .encoder,.specButton,body{font-family:verdana}.click,.specButton{cursor:pointer}.specButton,.title td{font-weight:700}body{font-size:10px;margin:0;padding:0}.encoder{font-size:11px;width:95%}.adminMenu,.panel{top:1em;width:200}.specButton{font-size:10px}.dirPath{background-color:#ff0}.red{color:red}.green{color:green}.dark{padding:2px;background:#bbb;color:#fff}.adminMenu,.bottomTool,.panel{position:fixed;background:#eee;border:1px solid #000;padding:1em;z-index:999999999}.panel{right:2%}.adminMenu{left:2%}.bottomTool{bottom:1em;left:2%;overflow:auto}input{width:80%}</style>
+
+                <script id="prototype" number="">&lt;script src="./Cms/Objects/prototype.js"&gt;&lt;/script&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+var jq = jQuery.noConflict();
+&lt;/script&gt;</script>
+
+            <script id="editor" number="">
+
+                <![CDATA[
+
+                // inject special tags in the textPad as bold, strike...
+                // input	target place, start position, end position
+                // output	nonde
+                function txtInject(trg,repdeb, repfin)
+                {//
+                	document.all('txt#content').focus();
+                	/* pour l'Explorer Internet */
+                	if(typeof document.selection != 'undefined')
+                	{
+                		/* Insertion du code de formatage */
+                		var range = document.selection.createRange();
+                		var insText = range.text;
+                		range.text = repdeb + insText + repfin;
+                		/* Ajustement de la position du curseur */
+                		range = document.selection.createRange();
+                		if (insText.length == 0)
+                		{
+                			range.move('character', -repfin.length);
+                		} else {
+                			range.moveStart('character', repdeb.length + insText.length + repfin.length);
+                		}
+                		range.select();
+                	}
+                	/* pour navigateurs plus récents basés sur Gecko*/
+                	else if(typeof input.selectionStart != 'undefined')
+                	{
+                		/* Insertion du code de formatage */
+                		var start = input.selectionStart;
+                		var end = input.selectionEnd;
+                		var insText = input.value.substring(start, end);
+                		input.value = input.value.substr(0, start) + repdeb + insText + repfin + input.value.substr(end);
+                		/* Ajustement de la position du curseur */
+                		var pos;
+                		if (insText.length == 0)
+                		{
+                			pos = start + repdeb.length;
+                		} else {
+                			pos = start + repdeb.length + insText.length + repfin.length;
+                		}
+                		input.selectionStart = pos;
+                		input.selectionEnd = pos;
+                	} else {
+                		/* requête de la position d'insertion */
+                		var pos;
+                		var re = new RegExp('^[0-9]{0,3}$');
+                		while(!re.test(pos))
+                		{
+                			pos = prompt("Insertion à la position (0.." + input.value.length + "):", "0");
+                		}
+                		if(pos > input.value.length)
+                		{
+                			pos = input.value.length;
+                		}
+                		/* Insertion du code de formatage */
+                		var insText = prompt("Veuillez entrer le texte à formater:");
+                		input.value = input.value.substr(0, pos) + repdeb + insText + repfin + input.value.substr(pos);
+                	}
+                }//
+
+                // sort a text pad in the main gui if double clicked on the content zone
+                // input	content string, text container id
+                // output	reformated string
+                function tinyTextPad(str,txt_id)
+                {// text editor
+
+                	// set the utilities images on the content zone of the container
+                	str= "<div id='txtPad' align='left'><img src='./Cms/Images/bold.gif' style='cursor:pointer;' onclick='trg=parentNode.nextSibling;txtInject(trg,\"<b>\",\"</b>\");' /><img src='./Cms/Images/italic.gif' onclick='trg=parentNode.nextSibling;txtInject(trg,\"<i>\",\"</i>\");' /><img src='./Cms/Images/underline.gif' style='cursor:pointer;' onclick='trg=parentNode.nextSibling;txtInject(trg,\"<u>\",\"</u>\");' /><img src='./Cms/Images/stroke.gif' style='cursor:pointer;' onclick='trg=parentNode.nextSibling;txtInject(trg,\"<s>\",\"</s>\");' /><img src='./Cms/Images/p.gif' style='cursor:pointer;' onclick='trg=parentNode.nextSibling;txtInject(trg,\"<p>\",\"</p>\");' /> | <img src='./Cms/Images/ul.gif' style='cursor:pointer;' onclick='trg=parentNode.nextSibling;txtInject(trg,\"<ul>\",\"</ul>\");' /><img src='./Cms/Images/li.gif' style='cursor:pointer;' onclick='trg=parentNode.nextSibling;txtInject(trg,\"<li>\",\"</li>\");' /></div><textarea id='"+txt_id+"' rows='15'>"+str+"</textarea>";
+
+                return str;
+                }//
+                ]]>
+
+            </script>
+
+                <script id="topScript" number="">
+
+                <![CDATA[
+                   function reformat(a){return a.replace(/=/gi,"``i").replace(/\"/gi,"``o").replace(/\?/g,"``q").replace(/&/g,"``e").replace(/%/g,"``u").replace(/#/g,"``a")}function trim(a){return a.replace(/^\s+|\s+$/g,"")}function collapse(a){switch(a.innerHTML){case "[_]":a.innerHTML="[+]";break;case "[+]":a.innerHTML="[_]"}}function showHide(a,b){a.style.display="none"==a.style.display?"":"none"}function doHtml(a){return a=a.replace(/&lt;/g,"<").replace(/&gt;/g,">")}
+function feedContainer(a){var b=a.innerHTML;cpt=document.getElementById("iCounter");var c=Number(cpt.value);"<tex"!=trim(b).substring(0,4)&&"<TEX"!=trim(b).substring(0,4)?(cpt.value=c+1,a.innerHTML="<textarea id='t_"+c+"' style='width:99%' rows='10' cols='20'>"+trim(b)+"</textarea>"):(cpt.value=c-1,placeContent(a.firstChild.value,a.id))}var _=function(){};
+_.prototype.oa={tab:[],getNodesById:function(a,b){if(a.getElementsByTagName){all=a.getElementsByTagName("*");for(g=0;g<all.length;g++)all[g].getAttribute&&all[g].getAttribute("id")==b&&this.tab.push(all[g]);return this.tab}},getNodesWithId:function(a,b){if(a.getElementsByTagName){var c=new RegExp("("+b+")","g");all=a.getElementsByTagName("*");for(g=0;g<all.length;g++)all[g].getAttribute&&c.test(all[g].getAttribute("id"))&&this.tab.push(all[g]);return this.tab?this.tab:!1}},each:function(){for(var a=
+0;a<this.tab.length;a++);}};
+_.prototype.Remote={getConnector:function(){var a=null;window.XMLHttpRequest?a=new XMLHttpRequest:window.ActiveXObject&&(a=new ActiveXObject("Microsoft.XMLHTTP"));return a},configureConnector:function(a,b){a.onreadystatechange=function(){4==a.readyState&&200==a.status&&b.call(a,{text:a.responseText,xml:a.responseXML})}},load:function(a){var b=a.url||"";a=a.callback||function(){};var c=this.getConnector();c&&(this.configureConnector(c,a),c.open("GET",b,!0),c.send(""))},save:function(a){var b=a.url||
+"",c=a.callback||function(){};a=a.data||"";var d=this.getConnector();d&&(this.configureConnector(d,c),d.open("POST",b,!0),d.setRequestHeader("Content-type","application/x-www-form-urlencoded"),d.send(a))}};
+function placeContent(a,b){_.Remote.save({url:"./main.php",data:"qry=2&id="+b+"&content="+reformat(a),callback:function(a){a=segment(a.text);var b=document.getElementById(a[0]);b.innerHTML=a[2];1==$("contentKey").value&&setNodes(b);_.oa.tab=[];feedContent()}})};
+
+                ]]>
+
+                </script>
+
+                <script id="endScript" number="">
+
+                    <![CDATA[
+
+_=new _;function segment(a){return a.split(RegExp("~~","g"))}function isToFeed(){return(set=_.oa.getNodesWithId(document.body,"lay"))?set:!1}function feedLayout(){var a=_.oa.getNodesWithId(document.body,"lay");a[0]&&_.Remote.save({url:"./main.php",data:"qry=1&id="+a[0].id+"&owner="+document.getElementById("customerName").value,callback:function(b){b=segment(b.text);var a=document.getElementById(b[0]);a.innerHTML=b[2];a.id=b[1];_.oa.tab=[];feedContent()}})}
+function feedData(){var a=_.oa.getNodesWithId(document.body,"data");a[0]&&_.Remote.save({url:"./main.php",data:"qry=1&id="+a[0].id+"&request=1&owner="+document.getElementById("customerName").value,callback:function(a){a=segment(a.text);var c=document.getElementById(a[0]);c.innerHTML=a[2];c.id=a[1];_.oa.tab=[];feedContent()}})}function feedContent(){feedLayout();feedData();0!=$("contentKey").value&&$("mainContent")&&($("mainContent").ondblclick=function(a){feedContainer(this)})};
+
+                    ]]>
+
+                </script>
+
+            <script id="pagerScript" number="">
+
+              <![CDATA[
+  function cropPage(){_.Remote.save({url:"./main.php",data:"qry=7",callback:function(a){a=segment(a.text);document.getElementById("mainContent").innerHTML=a[2]}})}function itemPage(){_.Remote.save({url:"./main.php",data:"qry=8",callback:function(a){a=segment(a.text);document.getElementById("mainContent").innerHTML=a[2]}})}function pagePage(){_.Remote.save({url:"./main.php",data:"qry=9",callback:function(a){a=segment(a.text);document.getElementById("mainContent").innerHTML=a[2]}})};
+              ]]>
+
+            </script>
+
+            <script id="adminScript" number="">
+
+               <![CDATA[
+
+                 // $('mainContent').onDblClick = "feedContainer(this);";
+
+               ]]>
+
+            </script>
+
+        </content>
+
+    </header>
+
+    <!-- HEADER CONTENT -->
+    <main>
+
+        <assert>
+
+            <![CDATA[
+
+                :: HERE COMES SERVER/CLIENT SIDE SNIPPETS ::
+
+            ]]>
+
+        </assert>
+
+        <!--  -->
+        <content>
+
+            <page id="standard">
+
+                <![CDATA[
+
+                    <input type="hidden" id="iCounter" name="nCounter" value="0" />
+                    <div id="lay:frameContent" class="toFeed" >> mainEntry container</div>
+
+                ]]>
+
+            </page>
+
+            <page id="frameContent">
+
+                <![CDATA[
+
+                        <div id="lay:topContent"></div>
+                        <div id="lay:mainContent"></div>
+                        <div  id="lay:bottomContent"></div>
+
+                ]]>
+
+            </page>
+
+            <page id="topContent">
+
+                <![CDATA[
+
+                   <div> > My Tiny CMS | TOP CONTENT</div>
+
+                ]]>
+
+            </page>
+            <page id="loginPane">
+
+                <![CDATA[
+
+                        <div>
+
+                            <input id="iUsr" type="text" value=" " style="width:96%;" /><br/>
+                            <input id="iButton" type="button" value="log on"  style="width:100%;" />
+
+                       </div>
+
+                ]]>
+
+            </page>
+
+            <page id="menuPane">
+
+                <![CDATA[
+
+                    <div class="panel">
+                        <span onclick="showHide($('cMenu'),1);collapse(this);">[+]</span>
+                        <span id="cMenu">  !.crop | !.item | !.page
+                            <p />
+                            <span onclick="showHide($('loginPane'),2);">:: Login Pane ::</span>
+                            <span><div id="lay:loginPane"></div></span>
+
+                        </span>
+                    </div>
+
+                ]]>
+
+            </page>
+
+            <page id="mainContent">
+
+                <![CDATA[
+
+                    <div id="mainContent">
+
+                        <div id="data:1|1|rootEntry"></div>
+
+                    </div>
+                ]]>
+
+            </page>
+
+            <!--
+
+                The bottom tool may contain all the moderator and admin utilities
+
+            -->
+            <page id="bottomTool">
+
+                <![CDATA[
+
+                    <!--
+                    <div class="bottomTool">
+                        <span onclick="showHide($('cBottom'),1);collapse(this);">[+]</span>
+                        <span id="cBottom">:: Bottom Tool ::
+                        <div id="cBottomPane"></div>
+                        </span>
+                    </div>
+                    -->
+
+                ]]>
+
+            </page>
+
+            <page id="bottomContent">
+
+                <![CDATA[
+
+                    <div> myTinyCS @ | version 1.0 </div>
+
+                ]]>
+
+            </page>
+
+            <page id="lay_01"/>
+            <page id="lay_02"/>
+            <page id="lay_03"/>
+
+<!--
+
+!.crop | !.item | !.page
+
+-->
+
+        </content>
+
+    </main>
+
+    <!-- PAGE CONTENT -->
+    <frameset id="frm_01">
+
+        <assert>
+
+            <code type="text/javascript" id="scr_01">
+
+                <![CDATA[
+
+                    function lastScript()
+                    {
+                        return "this is last script";
+                    }
+
+                ]]>
+
+            </code>
+
+        </assert>
+
+
+        <content><![CDATA[{{inc:token[html]}}
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="shortcut icon" href="http://zil0b.be/Old/img/inkodeo.ico" />
+        <style>{{inc:style[standard]}}</style>
+        <link href="http://zil0b.be/Owners/Dummy/Objects/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+        {{inc:script[prototype]}}
+        <script>{{inc:script[topScript]}}</script>
+        <script>{{inc:script[pagerScript]}}</script>
+
+    </head>
+
+    <body onload="feedContent()">
+
+        {{inc:customer}}
+
+        {{inc:menuPane}}
+        {{inc:bottomPane}}
+
+        <!-- Page entry -->
+        <div id='mainContent'>
+
+            {{inc:page[standard]}}
+
+        </div>
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="http://zil0b.be/Owners/Dummy/Objects/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    </body>
+
+    <script>
+
+         {{inc:script[endScript]}}
+
+    </script>
+
+</html>
+
+            ]]>
+
+        </content>
+
+    </frameset>
+
+    <tokens id="token_01">
+
+		<token id="xhtmlTransitional">&lt;!DOCTYPE html PUBLIC
+					"-//W3C//DTD XHTML 1.0 Transitional//EN"
+					"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</token>
+
+        <token id="HTML4">&lt;!DOCTYPE HTML PUBLIC
+                        "-//W3C//DTD HTML 4.01 Transitional//EN"
+                        "http://www.w3.org/TR/html4/loose.dtd"&gt;</token>
+
+        <token id="xhtmlstrict">&lt;!DOCTYPE html PUBLIC
+                     "-//W3C//DTD XHTML 1.0 Strict//EN"
+                     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</token>
+
+        <token id="xhtml_xmlns">
+
+            <![CDATA[
+
+                http://www.w3.org/1999/xhtml
+
+            ]]>
+
+        </token>
+        <token id="html">&lt;!doctype html&gt;
+        </token>
+    </tokens>
+
+
+	<framesets/>
+	<pages/>
+	<styles/>
+	<scripts/>
+
+</template>

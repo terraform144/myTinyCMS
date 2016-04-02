@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<fields count="1"><topic>factory</topic><scope>my little factory</scope><field id="introduction" number="1"><subject>introduction</subject><content>&lt;br/&gt;--&gt; La fabrique est actuellement en chantier. Elle sera ouverte en 2017.
+&lt;br/&gt;--&gt; Elle se proposera de r&#xE9;aliser vos projets de livres dont vous &#xEA;tes le h&#xE9;ros.
+&lt;br/&gt;--&gt; L'objectif &#xE9;tant de lancer ma petite &#xE9;choppe pour desktop et mobile.
+&lt;br/&gt;--&gt; La dur&#xE9;e du d&#xE9;veloppement ne doit pas exc&#xE9;der 3 mois &#xE0; raison de 3h/j -&gt; 5/7 jours :)
+&lt;br/&gt;--&gt; Je suis ouvert &#xE0; tous projets : sauf plateaux, sauf 3d, sauf d&#xE9;viance :/.
+
+&lt;div id="draft" style="display:block;"&gt;
+&lt;h3&gt;// PROJETS EN COURS //&lt;/h3&gt;
+     &lt;ul&gt;
+            &lt;li&gt;&lt;h3&gt;CNSF - game&lt;/h3&gt;
+                   &lt;ul&gt;
+                         &lt;li&gt;ep.1 : CNSUNB (Coul&#xE9;e noire sur une nuit blanche) - num&#xE9;ro de d&#xE9;p&#xF4;t : 000121046&lt;/li&gt;
+                         &lt;li&gt;ep.2 : l'E-mentalien&lt;/li&gt;
+                   &lt;/ul&gt;
+                   &lt;p&gt;&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;h3&gt;Star adventure - teaser anim&#xE9;&lt;/h3&gt;
+                   &lt;ul&gt;
+                         &lt;li&gt;pitch tir&#xE9; de ma courte "&lt;a href="http://terraform144.over-blog.com/2014/05/aventure-parmis-les-etoiles.html"&gt;aventure parmis les &#xE9;toiles&lt;/a&gt;"&lt;/li&gt;
+                   &lt;/ul&gt;
+                   &lt;p&gt;&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;h3&gt;LeD&#xE9;fiant - engin de jeu open-source pour livre interactif&lt;/h3&gt;
+                   &lt;ul&gt;
+                         &lt;li&gt;voir prototype html - &lt;a href="https://fr.wikibooks.org/wiki/Didacticiels_HTML5#Source"&gt;LDVELH&lt;/a&gt;&lt;/li&gt;
+                   &lt;/ul&gt;
+                   &lt;p&gt;&lt;/p&gt;
+            &lt;/li&gt;
+     &lt;/ul&gt;
+
+&lt;/div&gt;</content></field></fields>
