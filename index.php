@@ -1,19 +1,14 @@
 <?php
 
-/* TODO - !! It is cool to lop, I have the flow
- *
- * The application must have an entry point.
- *
- * Must have : a CMS to handle article products, with data and variations
- * for the products from all plateforms, facilitateur de vente
- *
+/* NOTE : This index is written dynamiccaly by the ECOMERZ MANAGER APPLICATION
+ * 
  */
 
 # ROUTES
 
 // todo change entry prd field
-if (!@$_REQUEST['prd'] || !is_dir('base/'.@$_REQUEST['prd'] )) die;
-@$prd_page = $_REQUEST['prd'];
+//if (!@$_REQUEST['prd'] || !is_dir('base/'.@$_REQUEST['prd'] )) die;
+@$prd_page = 'Smoothie_maker_portable'; //$_REQUEST['prd'];
 
 # INC /** Here comes all the inclusions */
 require_once 'mts/core/MyTinyShop.php';
