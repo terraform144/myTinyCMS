@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<fields count="2"><topic>2</topic><scope>myTinyCMS</scope><field id="1" number="1"><subject>1</subject><content>&lt;link href="http://zil0b.be/Owners/Dummy/Objects/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet"&gt;
-&lt;h2&gt;myTinyCMS   &lt;a type="button" href="https://github.com/gigiStrong/myTinyCMS" target="_blank" class="btn btn-xs btn-info"&gt;src&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;A little data driven cms&lt;/p&gt; </content></field><field id="saveme" number="2"><subject>saveme</subject><content>&lt;link href="http://zil0b.be/Owners/Dummy/Objects/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet"&gt;
-&lt;h2&gt;SAVE me -&gt; help me now please...   &lt;a type="button" href="https://github.com/gigiStrong/SAVEme" target="_blank" class="btn btn-xs btn-info"&gt;src&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;A cordova app that may help saving people in the firsts critical instants.&lt;/p&gt;</content></field></fields>
