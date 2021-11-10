@@ -2,7 +2,6 @@
 namespace mts\core;
 use mts;
 use mts\templates;
-use mts\templates\Theme;
 
 class MyTinyShop {
     
