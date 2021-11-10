@@ -11,8 +11,8 @@
 
 # ROUTES
 
+// todo change entry prd field
 if (!@$_REQUEST['prd'] || !is_dir('base/'.@$_REQUEST['prd'] )) die;
-
 @$prd_page = $_REQUEST['prd'];
 
 # INC /** Here comes all the inclusions */
