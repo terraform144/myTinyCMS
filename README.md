@@ -1,6 +1,6 @@
-#MyTinyShop -- PHP / DART / React - ECOM CMS#
+# MyTinyShop -- PHP / DART / React - ECOM CMS #
 
-##Author : zululad - End 2021##
+## Author : zululad - End 2021 ##
 
 This code is under MIT license : 
 ________________________________
