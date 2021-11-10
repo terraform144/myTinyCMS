@@ -7,8 +7,10 @@
 # ROUTES
 
 // todo change entry prd field
+##region ENTRY OF PRODUCT
 //if (!@$_REQUEST['prd'] || !is_dir('base/'.@$_REQUEST['prd'] )) die;
 @$prd_page = 'Smoothie_maker_portable'; //$_REQUEST['prd'];
+##endregion ENTRY OF PRODUCT
 
 # INC /** Here comes all the inclusions */
 require_once 'mts/core/MyTinyShop.php';
