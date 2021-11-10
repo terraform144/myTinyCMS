@@ -4,7 +4,6 @@ namespace mts\templates;
 
 require_once("iTheme.php");
 
-
 class Nutrex implements iTheme{
     
     public function head($str=null) {

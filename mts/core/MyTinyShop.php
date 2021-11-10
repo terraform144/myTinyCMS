@@ -19,4 +19,5 @@ class MyTinyShop {
     public function render() {
         $this->template->render();
     }
+
 }

@@ -7,6 +7,9 @@ require_once("iTheme.php");
 class Debut implements iTheme{
     
     public $title = 'Début';
+
+    public $html = '';
+
     public function head($str=null) {
         return $str;
     }
