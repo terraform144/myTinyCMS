@@ -1,0 +1,725 @@
+/*---------------------------------------------------------------------------------
+
+ Theme Name:   Nutrex Divi Child Theme
+ Theme URI:    https://diviawesome.com/product/nutrex-divi-child-theme
+ Description:  It is created for businesses such as Diet & Nutrition Coaching, Nutrition Therapy, Health Center, Healthy Food blogging, Nutrition Specialist, Nutritionist, etc.
+ Author:       Lovish Gulati
+ Author URI:   https://diviawesome.com
+ Template:     Divi
+ Version:      1.1
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+
+------------------------------ ADDITIONAL CSS HERE ------------------------------*/
+
+
+
+/*
+ *  Testimonial Page Slider Icon Customisaton
+ * 
+ */
+
+.dr-slider .et-pb-slider-arrows .et-pb-arrow-prev:before {
+    font-size: 30px;
+    content: "\e045";
+}
+ 
+.dr-slider .et-pb-slider-arrows .et-pb-arrow-next:before {
+    font-size: 30px;
+    content: "\e046";
+}
+
+
+/*
+ *  Contact Form Button Center Alignment
+ * 
+ */
+
+.et_contact_bottom_container {
+    float: none;
+    text-align: left;
+    display: block !important;
+	width:100%;
+}
+
+
+/********* Lightbox Styling ***********/
+
+
+/* Lightbox Zoom out cursor change */
+.mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+    cursor: inherit;
+}
+
+
+/* Lightbox close icon styling */
+.mfp-iframe-holder .mfp-close, .mfp-image-holder .mfp-close {
+    font-size: 50px;
+    top: -5px;
+    opacity: 1;
+}
+
+
+/************* Gallery Page ************/
+
+
+
+
+/* Pagination Styling - No Top Border*/
+.et_pb_gallery .et_pb_gallery_pagination {
+    border-top: 0px;
+}
+
+/* Active Pagination*/
+.et_pb_filterable_portfolio .et_pb_portofolio_pagination ul li a.active, .et_pb_gallery .et_pb_gallery_pagination ul li a.active {
+    color: #fff;
+    background-color: #8EC038;
+    padding: 10px 16px;
+    border-radius: 30px;
+}
+
+/* Default Pagination */
+.et_pb_gallery .et_pb_gallery_pagination ul li a {
+    color: #000;
+    padding: 10px 16px;
+    background-color: #f7f7f7;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+/* Center Align Pagination */
+.et_pb_gallery .et_pb_gallery_pagination ul {
+    text-align: center;
+}
+
+/* Gallery Hover Effect Rotate and Scale*/
+
+/*Normal State*/
+@media (min-width: 981px){
+.et_pb_gallery_grid .et_pb_gallery_item img {
+    transition: .5s ease-in-out;
+}
+}
+
+
+/* Hover State */
+@media (min-width: 981px){
+.et_pb_gallery_grid .et_pb_gallery_item img:hover {
+    transform: scale(1.3) rotate(-5deg);
+    transition: .5s ease-in-out;
+ }
+}
+
+
+/*
+ *  Team Members Imnage Customisation
+ * 
+ */
+/*Normal State*/
+.team  img {
+transition: .5s ease-in-out;
+	
+}
+		/*Hover State*/
+.team  img:hover {
+ transform: scale(1.2) rotate(-0deg);
+    transition: .5s ease-in-out;
+	}
+
+
+/*
+*/
+/*place button modules next to each other in the same column*/
+/*
+*/
+.pa-inline-buttons .et_pb_button_module_wrapper {
+    display: inline-block;
+}
+
+
+/*
+ *  Home Blurb Flip box Effect //DON'T DELETE 
+ * 
+ */
+@media (min-width:981px){
+.flip-box-row {
+  background-color: transparent;
+  width: 250px;
+  height: 250px;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+ 
+.flip-box-column {
+  position: relative;
+  width:100%;
+  height: 100%;
+  -webkit-transition: transform 0.8s;
+  transition: transform 0.8s;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+ 
+.flip-box-row:hover .flip-box-column {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+ 
+.flip-box-front, .flip-box-back{
+  position: absolute;
+   width:100%;
+  height: 100%;
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+ 
+.flip-box-back {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+}
+
+
+/*
+ * 
+ *  SLIDER 1 CSS 
+ * 
+ * */
+
+/* Slider Dot Navigation */
+
+.slider-1 .et-pb-controllers a {
+    background-color: #ffffff00 !important;
+    border-radius: 50px;
+    margin-right: 10px;
+    padding: 4px;
+    border: 4px solid #ffffff;
+    transition: all .4s ease;
+}
+
+.slider-1 .et-pb-controllers a:hover {
+    transition: all .4s ease;
+	transform: scale(1.2);
+}
+
+.slider-1 a.et-pb-active-control {
+    padding: 0 !important;
+    border: 8px solid #fff !important;
+	transition: all .4s ease;
+}
+
+.slider-1 a.et-pb-active-control:hover {
+    transform: scale(1.2);
+    transition: all .4s ease;
+}
+
+/* Slider Arrow Navigation */
+
+.slider-1 .et-pb-arrow-prev:before {
+    content: arrow_left_alt;
+    background: #8EC038;
+    border-radius: 30px;
+    color: #ffffff;
+    padding: 4px 5px 4px 4px;
+    font-size: 30px;
+}
+
+.slider-1 .et-pb-arrow-prev {
+    transition: all .4s ease;
+}
+.slider-1 .et-pb-arrow-prev:hover {
+    transform: scale(1.2);
+    transition: all .4s ease;
+}
+
+.slider-1 .et-pb-arrow-next:before {
+    content: arrow_right_alt;
+    background: #8EC038;
+    border-radius: 30px;
+    color: #ffffff;
+    padding: 4px 5px 4px 4px;
+    font-size: 30px;
+}
+
+.slider-1 .et-pb-arrow-next {
+    transition: all .4s ease;
+}
+.slider-1 .et-pb-arrow-next:hover {
+	transform: scale(1.2);
+    transition: all .4s ease;
+	   
+}
+
+/* Home 2 Slider Text Animation */
+
+.slider-1 .et_pb_slide_content p{
+	animation-duration: .7s !important;
+    animation-delay: 1.4s !important;
+	animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+	animation-name: flipInX;
+}
+
+.slider-1 .et_pb_button_wrapper{
+	animation-duration: .7s !important;
+    animation-delay: 1s !important;
+	animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+	animation-name: fadeInLeft;
+}
+
+
+
+/*
+ *  Testimonial Page Slider Icon Customisaton
+ * 
+ */
+.et_pb_video_play:before {
+	background: url(https://nutrex.duogeeks.com/wp-content/uploads/2021/02/icons8-circled-play-96.png);
+	font-size: 0;
+	height: 100px;
+	width: 100px;
+	display: block;
+	left: 0;
+	right: 0;
+	margin:auto;
+}
+a.et_pb_video_play {
+    margin-left: 0 !important;
+    left: 0;
+    right: 0;
+}
+
+/*
+ *  Home 3 Price Corner Ribbon 
+ * 
+ */
+.ribbon2 {
+color:#fff;
+
+font-weight: 60;/*
+font-size: 17px;*/
+text-align:center;
+border-radius: 60% 60% 60% 60%;
+box-shadow: 0px 12px 18px -6px rgba(0,0,0,0.25);
+right: -15px;
+top: -25px;
+padding-top:18px;
+/*line-height: 1.2em;*/
+position: absolute;
+width: 65px;
+height: 65px;
+z-index: 10;
+}
+
+
+/*
+ * 
+ *  Menu Dropdown Styling 
+ * 
+ */
+
+.nav li li {
+    padding: 0 0px;
+}
+
+.et-menu li li a {
+    width: 290px;
+	
+}
+
+.nav ul li:last-child a{
+	border-bottom:0;	
+}
+
+.nav ul li:hover:last-child a{
+	border-bottom:0;
+}
+.nav ul li a:hover {
+    background: #8EC038 ;
+	border-radius:60px;
+    opacity: 1;
+	padding-left: 30px;
+	border-bottom: 3px #ffffff;
+	transition: all .3s ease-in-out !important;
+}
+
+.et_pb_menu .et-menu-nav>ul ul {
+    padding: 0px 0;
+}
+
+/* Dropdown Menu Hover Background Color */ 
+.et_mobile_menu li a:hover, .nav ul li a:hover {     
+	transition: all .3s ease-in-out !important;
+	background-color: #8EC038 !important;     
+	opacity: 1; 
+	
+}
+
+
+/* Simple Black Divi Back To Top Button*/
+
+.et_pb_scroll_top.et-pb-icon {
+  background-color:#8EC038;
+  color: white;
+  margin-right:20px;
+  border-radius:60px;
+  padding: 10px;
+  transition: .5s ease;
+}
+
+.et_pb_scroll_top.et-pb-icon:hover {
+  background-color:#333333;
+  transition: .5s ease;
+  transform:translatey(-8px);
+}
+
+/*
+ * 
+ *  style the wp-pagenavi pagination links
+ * 
+ */
+
+.wp-pagenavi a,
+.wp-pagenavi span {
+	color: #000000;
+	background: #f1f3f5;
+	font-size: 1em !important;
+	line-height: 1em;
+	font-weight: bold !important;
+	padding: 0.45em 0.8em !important;
+	border-radius: 100px;
+	transition: all .5s;
+}
+
+
+/*style the wp-pagenavi current page number*/
+
+.wp-pagenavi span.current {
+	color: #ffffff !important;
+	background: #8EC038 !important;
+	border-radius: 100px;
+}
+
+
+/*style the wp-pagenavi pagination links on hover*/
+
+.wp-pagenavi a:hover {
+	color: #ffffff!important;
+	background: #8EC038!important;
+}
+
+
+
+/*style the wp-pagenavi pages text*/
+
+.wp-pagenavi .pages {
+	background: none;
+}
+
+
+/*remove border and center the wp-pagenavi links*/
+
+.wp-pagenavi {
+	border-top: none;
+	text-align: center;
+}
+
+/*
+ * 
+/* Sidebar widget Recent Post Design */
+/*
+*/
+div#recent-posts-2 a{
+
+    background: #F3F5ED;
+    display: flex;
+	border-radius: 10px;
+    padding: 10px 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px; 
+}
+
+div#recent-posts-2 a:hover{
+
+    background: #333333;
+    display: flex;
+	border-radius: 10px;
+    padding: 10px 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px; 
+}
+
+h4.widgettitle{
+    background: #8EC038;
+    padding: 15px;
+	border-radius:60px;
+    padding-left: 16px;
+    margin-bottom: 10px;
+}
+
+li.cat-item.cat-item a{
+    background: #F3F5ED;
+	border-radius: 60px;
+    padding: 0px;
+    margin: 10px 0;
+}
+
+li.cat-item.cat-item a:hover {
+    background: #333333;
+	border-radius: 60px;
+    padding: 0px;
+    margin: 10px 0;
+}
+
+li.cat-item.cat-item a{
+	display:flex;
+	padding:10px 20px;	
+}
+li.cat-item.cat-item a:hover{
+	display:flex;
+	padding:10px 20px;	
+}
+
+#aboutmewidget-2 {
+    color: black;
+}
+
+
+/*
+*/
+/*Left Featured Image Thumbnail*/
+/*
+*/
+@media only screen and ( min-width: 800px ) {
+.bbb_blog_list a img  {
+    float: left;
+    width: 60%;
+	border-radius:20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+}
+}
+/*Style Your Blog Post Title*/
+.et_pb_post h1 a, .entry-title {
+    font-size: 30px;
+    color: #000000;
+	font-weight: bold;
+    line-height: 1.3em;
+}
+
+/*Style Your Post Meta Text*/
+.post-meta {
+    color: #000000;
+    font-size: 12px;
+	font-weight: bold;
+    letter-spacing: 1px;
+   
+}
+
+.post-meta a {
+    color: #000000;
+    font-size: 12px;
+	font-weight: bold;
+    letter-spacing: 1px;
+  
+}
+
+
+/*Style Read More Button on Blog*/
+.bbb_blog_list a.more-link {
+    display: inline-block;
+    background: #8EC038;
+	font-weight: bold;
+    color: #000000;
+    width: 150px;
+    padding: 10px 10px;
+    text-align: center;
+    margin: 20px auto;
+	border-radius:60px;
+    letter-spacing: 1px;
+}
+
+/*Read More Button Hover Style*/
+.bbb_blog_list a.more-link:hover {
+    background: #333333;
+    color: #000000;
+}
+
+
+/*Remove Sidebar Divider*/
+#main-content .container:before {
+	background-color: transparent;
+}
+
+/*Style Sidebar Widget Title*/
+h4.widgettitle {
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 1px;
+	color: #000000;
+}
+
+
+/*Style Sidebar Widget Body Text*/
+.et_pb_widget p, .et_pb_widget ul li, .et_pb_widget ul li a:link, .et_pb_widget ul li a:visited  {
+	font-size: 16px;
+	text-align: center;
+	line-height: 1.5em;
+	color: #000000;
+}
+
+/*
+*/
+
+/************  Portfolio Page  *************/
+
+
+/* Active Pagination*/
+.et_pb_filterable_portfolio .et_pb_portofolio_pagination ul li a.active {
+    color: #fff;
+    background-color: #8EC038;
+    padding: 10px 16px;
+    border-radius: 30px;
+}
+
+/* Default Pagination */
+.et_pb_filterable_portfolio .et_pb_portofolio_pagination ul li a {
+    color: #000;
+    padding: 10px 16px;
+    background-color: #f7f7f7;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+/* Center Align Pagination */
+.et_pb_filterable_portfolio .et_pb_portofolio_pagination ul {
+    text-align: center;
+}
+
+/* Pagination Styling - No Top Border*/
+.et_pb_filterable_portfolio .et_pb_portofolio_pagination {
+    border-top: 0px;
+}
+
+/* Three Column Portfolio */
+@media only screen and ( min-width: 768px ) {
+ 
+	.three-column .et_pb_grid_item {
+		width: 30.333% !important;
+		margin: 0 2.5% 2.5% 0 !important;
+	}
+	 
+		.three-column .et_pb_grid_item:nth-child(3n) {
+		margin-right: 0 !important;
+	}
+	 
+		.three-column .et_pb_grid_item:nth-child(4n+1) {
+		clear: unset !important;
+	}
+ 
+}
+
+
+/*  Portfolio Filter Styling   */
+
+/** Default **/
+.et_pb_filterable_portfolio .et_pb_portfolio_filters li a {
+    color: #8EC038;
+    font-weight: 700;
+    padding: 13px 20px;
+    border: 0px;
+	 
+}
+
+/** Hover **/
+.et_pb_filterable_portfolio .et_pb_portfolio_filters li a:hover {
+    color: #8EC038;
+	
+    background-color: #f4f4f4;
+}
+
+/** Active Tab **/
+.et_pb_filterable_portfolio .et_pb_portfolio_filters li a.active {
+    color: #ffffff;
+	 
+    background-color: #8EC038;
+}
+
+/* Active Tab Box Curved */
+.et_pb_filterable_portfolio .et_pb_portfolio_filters li:first-child a {
+   
+	margin-right:5px;
+}
+
+
+/* Portfolio Hover Effect Rotate and Scale*/
+
+/*Normal State*/
+@media (min-width: 981px){
+.et_pb_filterable_portfolio_grid .et_pb_portfolio_item img {
+    transition: .5s ease-in-out;
+}
+}
+
+/* Hover State */
+@media (min-width: 981px){
+.et_pb_filterable_portfolio_grid .et_pb_portfolio_item img:hover {
+    transform: scale(1.3) rotate(5deg);
+    transition: .5s ease-in-out;
+}
+}
+
+
+
+
+/*****------- Mobile Nested Submenu  -------****/
+
+
+
+/** This hides the sub menu items on mobile **/
+#page-container .mobile_nav li ul.hide {
+    display: none !important;
+}
+
+
+/** This adjusts the positioning and the background transparency of the parent menu item on mobile **/
+#page-container .mobile_nav .menu-item-has-children {
+    position: relative;
+}
+#page-container .mobile_nav .menu-item-has-children > a {
+    background: transparent;
+}
+
+
+/** This styles the icon and moves it to the right **/
+#page-container .mobile_nav .menu-item-has-children > a + span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    z-index: 3;
+}
+
+
+/** Here you can swap out the actual icons **/
+#page-container span.menu-closed:before {
+    content: "\4c";
+    display: block;
+    color: #000;
+    font-size: 16px;
+    font-family: ETmodules;
+}
+#page-container span.menu-closed.menu-open:before {
+    content: "\4d";
+}
