@@ -2,8 +2,9 @@
 
 /* NOTE : This index is written dynamiccaly by the ECOMERZ MANAGER APPLICATION
  * 
+ * 
  */
-
+//TODO include Symfony
 # ROUTES
 
 // todo change entry prd field
