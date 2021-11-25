@@ -4,8 +4,9 @@
 * Must have : a CMS to handle article products, with data and variations
 * for the products from all plateforms, facilitateur de vente
 
-[] double authentification - voir grafikart.fr
-[] faire theme début comme shopify
-[] do theme nutrex
-[] penser systeme de modification
+[] CMS DEPRECATED !! Do tinyShop.site exporter
 [] done in relation with the manager ecomerz.com
+    CMS Deprecated -> ECOM MANAGER > tinyShop.websites
+        []chk laminas or laravel for stripe and mollie module
+        []webservice for contacting manager -> feedbacks
+    --> Theme Debut, Nutrex
