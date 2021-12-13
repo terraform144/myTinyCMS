@@ -21,7 +21,7 @@ class thSmoothie_maker_portable extends Debut{
 	}
 	
   public function body($header, $main) {
-  	return '<header>'.$header.'</header><main>'.$this->getMain().'</main>';
+  	return '<header>'.$header.'</header><main><div id="ctc">contenu a remplacer todo</div>'.$this->getMain().'</main>';
   }
 	
 	public function footer($str) {

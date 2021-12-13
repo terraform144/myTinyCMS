@@ -10,7 +10,6 @@
   </head>
   <body>
     
-    <div id="ctc">content to replace todo</div>
     <?= $body ?>
     <?= $footer ?>
     
