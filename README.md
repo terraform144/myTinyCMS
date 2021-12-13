@@ -1,4 +1,4 @@
-# MyTinyShop -- PHP / DART / React - ECOM CMS #
+# MyTinyShop -- PHP / DART / ANGULAR - ECOM CMS #
 
 Author : zululad
 
