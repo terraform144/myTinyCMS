@@ -7,24 +7,23 @@ require_once("iTheme.php");
 class Debut implements iTheme{
     
     public $title = 'Début';
-    public function head($str=null) {
+    public function head($str) {
         return $str;
     }
     
-    public function body($header=null, $main) {
+    public function body($header, $main) {
         return '<header>'.$header.'</header><main>'.$main.'</main>';
     }
     
-    public function footer($str=null) {
+    public function footer($str) {
         return '<footer>'.$str.'</footer>';
     }
     
     public function render() {
         $title = $this->title;
-        $head = $this->head('<script>console.log("Theme Debut");</script>');
         $body = $this->body('::header::', '::content::');
         $footer = $this->footer('::footer::');
-      
+        
         require_once 'debut.inc.php';
     }
     

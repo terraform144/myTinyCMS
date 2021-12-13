@@ -20,11 +20,11 @@ class thSmoothie_maker_portable extends Debut{
 						.$_SMP->product_visual.'<hr></div>';
 	}
 	
-  public function body($header=null, $main) {
+  public function body($header, $main) {
   	return '<header>'.$header.'</header><main>'.$this->getMain().'</main>';
   }
 	
-	public function footer($str=null) {
+	public function footer($str) {
   	return '<footer>'.$str.'</footer>';
   }
 	
