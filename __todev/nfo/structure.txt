@@ -1,6 +1,6 @@
 // about the dart implementations
 js_base.1.dart > /script/main.js
-
+/script/js_main.dart > /script/js_main.dart.js
 
 
 
