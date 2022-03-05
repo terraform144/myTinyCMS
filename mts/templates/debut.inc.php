@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= $title ?></title>
-    <script defer src="scripts/js_main.dart.js"></script>
-
+    <script defer async src="scripts/js_main.dart.js"></script>
+    
   </head>
   <body>
     

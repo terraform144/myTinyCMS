@@ -10,5 +10,7 @@
 pubspec.lock
 main.js.deps
 main.js.map
+__todev
+__critic
 scripts/js_main.dart.js.map
 scripts/js_main.dart.js.deps
