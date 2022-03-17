@@ -9,4 +9,11 @@ class IronMTweaker {
      * Key: lazy fuzzy crisp
      */
 
+     public function __construct() {
+
+     }
+
+     public function crisp() {
+
+     }
 }
