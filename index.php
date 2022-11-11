@@ -1,6 +1,6 @@
 <?php
 
-/* NOTE : This index is written dynamiccaly by the ECOMERZ MANAGER APPLICATION
+/* NOTE : This index is written dynamicaly by the ECOMERZ MANAGER APPLICATION
  * 
  * 
  */
