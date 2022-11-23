@@ -14,3 +14,4 @@ __todev
 __critic
 scripts/js_main.dart.js.map
 scripts/js_main.dart.js.deps
+/vendor/

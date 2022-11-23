@@ -2,9 +2,10 @@
 
 /* NOTE : This index is written dynamicaly by the ECOMERZ MANAGER APPLICATION
  * 
- * 
+ * author : zululad - github.com/terraform144
  */
-//TODO include Symfony
+
+require "vendor/autoload.php";
 # ROUTES
 
 // todo change entry prd field
