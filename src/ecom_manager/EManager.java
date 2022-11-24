@@ -4,7 +4,7 @@
 package ecom_manager;
 
 /**
- * @author jl_be
+ * @author zululad
  *
  */
 public class EManager {

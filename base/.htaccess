@@ -1,4 +1,0 @@
-   AuthName "Username and password required"
-   AuthUserFile .htpasswd
-   Require valid-user
-   AuthType Basic
