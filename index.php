@@ -8,6 +8,20 @@
 require "vendor/autoload.php";
 
 # ROUTES
+$routes = [
+  "/" => "index.php",
+  "/about" => "about.php",
+  "/contact" => "contact.php"
+];
+
+$currentUrl = $_SERVER["REQUEST_URI"];
+
+if (isset($routes[$currentUrl])) {
+  include __DIR__ . "/views/" . $routes[$currentUrl];
+} else {
+  http_response_code(404);
+  echo "Page non trouvée";
+}
 
 // todo change entry prd field
 ##region ENTRY OF PRODUCT
