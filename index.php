@@ -17,6 +17,17 @@ $routes = [
 
 $currentUrl = $_SERVER["REQUEST_URI"];
 
+// todo adapter la profondeur de route !!
+// Parcourez les routes et vérifiez si l'URL courante correspond à l'une d'entre elles
+foreach ($routes as $pattern => $view) {
+  if (preg_match("#^" . $pattern . "$#", $currentUrl, $matches)) {
+    // Si oui, incluez le fichier de vue associé à la route
+    include __DIR__ . "/views/" . $view;
+    // Arrêtez la boucle foreach
+    break;
+  }
+}
+
 if (!isset($routes[$currentUrl])) {
   http_response_code(404);
   echo "Page non trouvée";
