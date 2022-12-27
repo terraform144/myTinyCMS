@@ -1,0 +1,4 @@
+AllowOverride All
+
+RewriteEngine On
+RewriteRule ^(.*)$ index.php [QSA,L]

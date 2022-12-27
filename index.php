@@ -11,22 +11,20 @@ require "vendor/autoload.php";
 $routes = [
   "/" => "index.php",
   "/about" => "about.php",
-  "/contact" => "contact.php"
+  "/contact" => "contact.php",
+  "/myTinyCMS/" => "Smoothie_maker_portable"
 ];
 
 $currentUrl = $_SERVER["REQUEST_URI"];
 
-if (isset($routes[$currentUrl])) {
-  include __DIR__ . "/views/" . $routes[$currentUrl];
-} else {
+if (!isset($routes[$currentUrl])) {
   http_response_code(404);
   echo "Page non trouvée";
 }
 
 // todo change entry prd field
 ##region ENTRY OF PRODUCT
-//if (!@$_REQUEST['prd'] || !is_dir('base/'.@$_REQUEST['prd'] )) die;
-@$prd_page = 'Smoothie_maker_portable'; //$_REQUEST['prd'];
+@$prd_page = $routes[$currentUrl]; //'Smoothie_maker_portable'; //$_REQUEST['prd'];
 ##endregion ENTRY OF PRODUCT
 
 # INC /** Here comes all the inclusions */
