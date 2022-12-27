@@ -34,8 +34,8 @@ if (isset($routes[$currentUrl['path']])) {
   require_once ($routes[$currentUrl['path']]);  die();
 } else {
   if ( ! array_key_exists($currentUrl['path'], $prd_routes)) {
-    http_response_code(404);
-    echo "Page non trouvée"; die();
+//http_response_code(404);
+    header('Location:http://terraform144.eu');
   }
 }
 
