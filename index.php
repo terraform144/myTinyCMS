@@ -9,13 +9,13 @@ require "vendor/autoload.php";
 
 # ROUTES
 $routes = [
-  "/" => "index.php",
+  "/" => "home.php",
   "/about" => "about.php",
   "/contact" => "contact.php",
-  "/myTinyCMS/" => "Smoothie_maker_portable"
+  "/smoothie" => "Smoothie_maker_portable"
 ];
 
-$currentUrl = $_SERVER["REQUEST_URI"];
+$currentUrl = parse_url($_SERVER["REQUEST_URI"]);
 
 // todo adapter la profondeur de route !!
 // Parcourez les routes et vérifiez si l'URL courante correspond à l'une d'entre elles
@@ -28,9 +28,12 @@ foreach ($routes as $pattern => $view) {
   }
 }
 
-if (!isset($routes[$currentUrl])) {
+if (!isset($routes[$currentUrl['path']])) {
   http_response_code(404);
   echo "Page non trouvée";
+} else {
+  require_once ($routes[$currentUrl['path']]);
+  die();
 }
 
 // todo change entry prd field
