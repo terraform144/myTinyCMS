@@ -29,7 +29,7 @@ if (isset($routes[$currentUrl['path']])) {
 }
 
 ##region ENTRY OF PRODUCT
-@$prd_page = $prd_routes[$currentUrl['path']]; //'Smoothie_maker_portable'; //$_REQUEST['prd'];
+@$prd_page = $prd_routes[$currentUrl['path']];
 ##endregion ENTRY OF PRODUCT
 
 # INC /** Here comes all the inclusions */

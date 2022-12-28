@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
     <htmlContent>
-        <head>
+        <head type="vue3">
         <![CDATA[
             <titre>Smoothie maker portable</titre>
             <script src="https://unpkg.com/vue@3.0.5"></script>
