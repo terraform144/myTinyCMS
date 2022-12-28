@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
     <htmlContent>
+        <head>
+        <![CDATA[
+            <titre>Smoothie maker portable</titre>
+            <script src="https://unpkg.com/vue@3.0.5"></script>
+        ]]>
+        </head>
         <header>
         <![CDATA[
             <header>
@@ -17,8 +23,14 @@
         <main>
         <![CDATA[
             <div id="app"></div>
-
-            <script></script>
+            <script>
+                const app = Vue.createApp({
+                    data() {
+                        content: 'This is the main content'
+                    }
+                });
+                const vm = app.mount('#app');
+            </script>
         ]]>
         </main>
         <footer>
