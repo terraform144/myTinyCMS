@@ -19,17 +19,6 @@ $prd_routes = [
 
 $currentUrl = parse_url($_SERVER["REQUEST_URI"]);
 
-// todo adapter la profondeur de route !!
-// Parcourez les routes et vérifiez si l'URL courante correspond à l'une d'entre elles
-/**foreach ($routes as $pattern => $view) {
-  if (preg_match("#^" . $pattern . "$#", $currentUrl, $matches)) {
-    // Si oui, incluez le fichier de vue associé à la route
-    include __DIR__ . "/views/" . $view;
-    // Arrêtez la boucle foreach
-    break;
-  }
-} // Todo completion -> Ask chatGPT*/
-
 if (isset($routes[$currentUrl['path']])) {
   require_once ($routes[$currentUrl['path']]);  die();
 } else {
@@ -39,7 +28,6 @@ if (isset($routes[$currentUrl['path']])) {
   }
 }
 
-// todo change entry prd field
 ##region ENTRY OF PRODUCT
 @$prd_page = $prd_routes[$currentUrl['path']]; //'Smoothie_maker_portable'; //$_REQUEST['prd'];
 ##endregion ENTRY OF PRODUCT
