@@ -1,6 +1,6 @@
 <?php
 
-/* NOTE : This index is written dynamicaly by the ECOMERZ MANAGER APPLICATION
+/* NOTE : This index should be written dynamicaly by the ECOMERZ MANAGER APPLICATION
  * 
  * author : zululad - github.com/terraform144
  */
