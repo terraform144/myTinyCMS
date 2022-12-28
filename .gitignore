@@ -12,8 +12,8 @@ main.js.deps
 main.js.map
 __todev
 __critic
-mts/core/MolliePayment.php
-mts/core/StripePayment.php
+/mts/core/MolliePayment.php
+/mts/core/StripePayment.php
 scripts/js_main.dart.js.map
 scripts/js_main.dart.js.deps
 /vendor/
