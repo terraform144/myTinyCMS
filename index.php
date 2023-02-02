@@ -8,12 +8,13 @@
 require "vendor/autoload.php";
 
 # ROUTES
-$routes = [
+$routes = [ // here comes all the common routes for the application non prd
   "/" => "home.php",
   "/about" => "about.php",
-  "/contact" => "contact.php"
+  "/contact" => "contact.php",
+  "/critical-role" => "base/cr/index.php"
 ];
-$prd_routes = [
+$prd_routes = [ // here comes all the prd funnels 
   "/smoothie-maker" => "Smoothie_maker_portable"
 ];
 

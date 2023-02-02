@@ -3,7 +3,6 @@ namespace mts\templates;
 
 interface iTheme
 {
-    
     public function head($str);
     public function body($header, $main);
     public function footer($str);
@@ -13,4 +12,3 @@ interface iTheme
      */
     public function render();
 }
-
