@@ -1,6 +1,8 @@
-<html><body><pre>
+<html>
+  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"></head>
+  <body><pre>
     
-    [terraform144.local] Thanks for visiting us :)
+    [terraform144 at SMart] Thank you :)
 
     Art by Veronica Karlsson
              _         _
@@ -8,8 +10,12 @@
 ( _`.'. -   'o` )   ( 'o`   - .`.'_ )
  _\.'_'      _.-'     `-._      `_`./_
 ( \`. )    //\`         '/\\    ( .'/ )
-\_`-'`---'\\__,       ,__//`---'`-'_/
- \`        `-\         /-'        '/
-  `                               '   VK
+ \_`-'`---'\\__,       ,__//`---'`-'_/
+  \`        `-\         /-'        '/
+    `                               '   VK
+    
+    WIP //
+     [ ] IIB
+     [ ] LCDSF
 
 </pre></body></html>
