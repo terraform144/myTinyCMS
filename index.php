@@ -12,11 +12,10 @@ $routes = [ // here comes all the common routes for the application non prd
   "/" => "base/t144/index.html",
   "/about" => "base/about.php",
   "/contact" => "base/contact.php",
-  "/dark-basic" => "base/dark_basic/index.php",
-  //"/T144" => "base/t144/index.php"
+  "/Selor" => "Selor/index.php",
 ];
 $prd_routes = [ // here comes all the prd funnels 
-  "/smoothie-maker" => "Smoothie_maker_portable"
+  //"/smoothie-maker" => "Smoothie_maker_portable"
 ];
 
 $currentUrl = parse_url($_SERVER["REQUEST_URI"]);
