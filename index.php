@@ -10,6 +10,7 @@ require "vendor/autoload.php";
 # ROUTES
 $routes = [ // here comes all the common routes for the application non prd
   "/" => "base/t144/index.html",
+  "/bureautique" => "base/Bureautique/index.html",
   "/about" => "base/about.php",
   "/contact" => "base/contact.php",
   "/Selor" => "Selor/index.php",
