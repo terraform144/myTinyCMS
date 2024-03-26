@@ -14,6 +14,7 @@ $routes = [ // here comes all the common routes for the application non prd
   "/about" => "base/about.php",
   "/contact" => "base/contact.php",
   "/Selor" => "Selor/index.php",
+  "/construct" => "base/construct/index.html",
 ];
 $prd_routes = [ // here comes all the prd funnels 
   //"/smoothie-maker" => "Smoothie_maker_portable"
@@ -26,7 +27,7 @@ if (isset($routes[$currentUrl['path']])) {
 } else {
   if ( ! array_key_exists($currentUrl['path'], $prd_routes)) {
 //http_response_code(404);
-    header('Location:http://terraform144.eu');
+    header('Location:http://terraform144.com');
   }
 }
 
